@@ -1,11 +1,14 @@
-import '../../components/SignUpForm/SignUpForm'
-import SignUpForm from '../../components/SignUpForm/SignUpForm'
-export default function AuthPage(props) {
-     //The component must return some JSX
-     return (
-          <main>
-               <h1>Auth Page</h1>
-               <SignUpForm />
-          </main>
-     )
+// AuthPage.js
+
+import SignUpForm from "../../components/SignUpForm/SignUpForm"
+import LoginForm from "../../components/LoginForm/LoginForm"
+
+export default function AuthPage(props){
+    return(
+        <main>
+            <h1>Auth Page</h1>
+            <SignUpForm setUser={props.setUser}/>
+            <LoginForm setUser={props.setUser}/>
+        </main>
+    )
 }

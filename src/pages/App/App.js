@@ -5,7 +5,6 @@ import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import FruitsPage from '../FruitsPage/FruitsPage';
 import NavBar from '../../components/NavBar/NavBar';
 import { Routes, Route} from 'react-router-dom'
-import './App.module.scss';
 
 function App() {
   const [state, setState] = useState(null)
@@ -35,10 +34,11 @@ function App() {
             <Route path="/fruits" element={<FruitsPage />} />
             <Route path="/orders/new" element={<NewOrderPage />} />
             <Route path="/orders" element={<OrderHistoryPage />} />
+            <Route path="/" element={<NewOrderPage />}/>
           </Routes>
         </>
          :
-        <AuthPage/>
+        <AuthPage setUser={setUser}/>
       }
     </main>
   );
