@@ -54,7 +54,7 @@ export default function NewOrderPage({ user, setUser }) {
   }
 
   return (
-    <main className={NewOrderPage}>
+    <main >
       <aside>
         <CategoryList
           categories={categoriesRef.current}

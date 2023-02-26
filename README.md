@@ -1,10 +1,23 @@
-# Getting Started with Create React App
+```json
+{       
+        "name": "vbnbv",
+        "email": ".com",
+        "password": "hkjh",
+        "confirm": "jhk"
+}
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+```
+![](./photos/POST-CreateAccount.png)
 ## Available Scripts
 
-In the project directory, you can run:
+```json
+{       
+        "name":"", 
+        "email": ".com",
+        "password":"hkl"
+}
+```
+![](./photos/POST-Login.png)
 
 ### `npm start`
 

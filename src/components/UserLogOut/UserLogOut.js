@@ -1,4 +1,3 @@
-//import './UserLogOut.css';
 import { logOut } from '../../utilities/users-service';
 
 export default function UserLogOut({ user, setUser }) {
@@ -9,7 +8,7 @@ export default function UserLogOut({ user, setUser }) {
 
   return (
     <div className="UserLogOut">
-      <div>{user.name}</div>
+      <div>{user.email}</div>
       <div className="email">{user.email}</div>
       <button className="btn-sm" onClick={handleLogOut}>LOG OUT</button>
     </div>

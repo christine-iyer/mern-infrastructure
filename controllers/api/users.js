@@ -1,5 +1,4 @@
-// /controllers/api/users.js
-
+require('dotenv').config()
 const User = require('../../models/user')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
@@ -13,6 +12,7 @@ const dataController = {
   async create (req, res, next) {
     try {
       const user = await User.create(req.body)
+      console.log(req.body)
       // token will be a string
       const token = createJWT(user)
       // send back the token as a string
@@ -22,6 +22,7 @@ const dataController = {
       res.locals.data.token = token
       next()
     } catch (e) {
+      console.log('you got a database problem')
       res.status(400).json(e)
     }
   },
